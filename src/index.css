@@ -1,25 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
 * {
   box-sizing: border-box;
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
-
 body {
   margin: 2rem;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Lato", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: rgb(197, 194, 194);
-  background-image: url("noaa-0XUnd0bXqTE-unsplash.jpg");
+  background-color: rgb(255, 255, 255);
   color: black;
 }
 
 a {
   text-decoration: none;
+  color: rgb(0, 0, 0);
 }
 
-li {
-  list-style-type: none;
+nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+nav li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+home h2 {
+  width: 100vw;
+  height: 84vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 input {
   width: 25rem;
@@ -50,15 +64,21 @@ img {
 
 .info p {
   color: black;
-  background-color: wheat;
-  width: 55%;
-  height: 100px;
 }
 
-.footer {
-  width: 100%;
-  max-width: 100%;
+.info {
+  position: absolute;
+  top: 250px;
+  left: 350px;
+  margin-bottom: 50px;
+}
+
+footer {
   text-align: center;
+  padding: 2rem;
+  position: absolute;
+  bottom: 20px;
+  left: 600px;
 }
 
 .country {
@@ -73,7 +93,7 @@ img {
 
 .country h2,
 .country h3 {
-  background-color: rgb(141, 129, 96);
+  background-color: rgb(0, 0, 0);
   padding: 1rem;
   margin: 0;
   color: white;

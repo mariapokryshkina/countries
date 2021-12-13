@@ -1,5 +1,6 @@
 import React from 'react';
 import Home from './Home';
+import Footer from './Footer';
 import CountryList from './CountryList';
 import CountrySingle from './CountrySingle';
 import { BrowserRouter, Link, Routes, Route, useParams } from 'react-router-dom';
@@ -34,7 +35,7 @@ const App = () => {
         </Routes>
 
 
-
+        <Footer />
 
         </BrowserRouter>
     );

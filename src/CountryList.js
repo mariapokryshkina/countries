@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import axios from 'axios';
 import CountryCard from './CountryCard';
+import "./loader.css";
 
 
 class CountryList extends Component {
@@ -20,26 +21,35 @@ class CountryList extends Component {
       });
   }
 
-  searchHandler(event) {
+   searchHandler(e) {
     this.setState({
-      searchInput: event.target.value
+      searchInput: e.target.value,
     });
-  };
+    console.log(this.state.searchInput);
+  }
 
 
   render () {
     if (this.state.isLoading) {
       return (
-        <div className='loader'>
-          <div class="lds-dual-ring"></div>
+        <div>
+          <div className="lds-ring">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
         </div>
-      )
-    } else {
+      );
+    }
+    
+    if (!this.state.isLoading) {
       return (
        <div className="countries">
         <input 
-        type='text' 
-        name='searchInput'
+        type='text'
+        placeholder="Search..." 
+        name='search'
          onChange={this.searchHandler.bind(this)}/>
 
         
@@ -58,6 +68,7 @@ class CountryList extends Component {
       )
     }
   }
+  
 }
 
 export default CountryList;

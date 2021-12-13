@@ -2,22 +2,44 @@
   box-sizing: border-box;
 }
 
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
 body {
   margin: 2rem;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: "Montserrat", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(197, 194, 194);
+  background-image: url("noaa-0XUnd0bXqTE-unsplash.jpg");
+  color: black;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+input {
+  width: 25rem;
+  height: 3rem;
+  position: absolute;
+  top: 15px;
+  right: 5%;
+}
+
+.weather {
+  position: inherit;
 }
 
 img {
-  height: 40px;
-  width: 40px;
+  height: 50px;
+  width: 50px;
   border-radius: 50%;
   position: absolute;
-  top: -5px;
-  right: -5px;
+  top: 5px;
+  right: 5px;
   box-shadow: 0 0 5px #333;
 }
 
@@ -26,15 +48,32 @@ img {
   grid-gap: 1rem;
 }
 
+.info p {
+  color: black;
+  background-color: wheat;
+  width: 55%;
+  height: 100px;
+}
+
+.footer {
+  width: 100%;
+  max-width: 100%;
+  text-align: center;
+}
+
 .country {
   box-shadow: 0 0 5px rgb(92, 92, 92);
-  border-radius: 5px;
+  border-radius: 50px;
   position: relative;
+  background-color: white;
+  width: 300px;
+  height: 350px;
+  margin: 5rem;
 }
 
 .country h2,
 .country h3 {
-  background-color: rgb(106, 106, 106);
+  background-color: rgb(141, 129, 96);
   padding: 1rem;
   margin: 0;
   color: white;
@@ -45,7 +84,7 @@ img {
 }
 
 .cardContent {
-  padding: 1rem;
+  padding: 3rem;
 }
 
 .cardContent span {
